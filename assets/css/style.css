@@ -1,0 +1,101 @@
+.container {
+  background-color:transparent;
+}
+
+.title-header {
+  background-color: rgba(4, 4, 4, 0.66) !important;
+  text-align:center;
+  padding: 10px 0px 10px 0px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid white;
+  opacity:0.9;
+}
+
+#map {
+  height: 700px;
+  opacity: 0.95 !important;
+  border: 5px solid white;
+}
+
+#background {
+  background-image:url("../images/rain.gif") !important;
+  background-repeat:no-repeat !important;
+  background-size:cover !important;
+}
+
+#user-input {
+  background-color: transparent !important;
+  font-size:25px !important;
+}
+
+::placeholder {
+  color: rgba(232, 233, 232, 0.67) !important;
+  font-size: 20px !important;
+}
+
+hr {
+  background-color: white;
+  height: 2px !important;
+}
+
+h1,
+h2,
+form,
+label,
+#user-input {
+  color: white !important;
+}
+
+.btn {
+  border: none !important;
+  background-color: white !important;
+  color: black !important;
+  margin-bottom: 2px;
+  font-size: 20px !important;
+}
+
+h1 {
+  font-size: 75px !important;
+  font-weight: 500 !important;
+  font-family: 'Indie Flower', cursive !important;
+}
+
+h2 {
+  font-size: 40px !important;
+}
+
+div.col-md-3.map-legend {
+  padding: 30px;
+  border: 5px solid white;
+  background-color: rgba(4, 4, 4, 0.66) !important;
+}
+
+body {
+  background-image: url("../images/sad.jpg");
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+}
+
+.form-check {
+  font-size: 22px;
+}
+
+.form-check-input {
+  font-size: 30px;
+}
+
+.search-title {
+  font-size: 40px;
+}
+
+/*-- user input error message --*/
+.error {
+  color: red;
+  font-size: 18px;
+  padding-top: 2px !important;
+  margin-bottom: 0px !important;
+}
+
+label.error {
+  display: inline;
+}

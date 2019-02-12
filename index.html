@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>School Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/leaflet.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link rel="icon" href="assets/images/icon.jpg">
+</head>
+
+<body>
+  <header>
+    <div class="title-header justify-content-center">
+      <div>
+        <h1>Seattle Schools Info</h1>
+          <hr>
+          <h2>Find the nearest schools!</h2>
+      </div>
+    </div>
+  </header>
+
+  <div id="app" class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div id="background">
+        <div id="map" class="map">
+          <!-- the map go here -->
+        </div>
+      </div>
+      </div>
+      <div class="col-md-3 map-legend">
+        <form id="search-form">
+          <label for="search-input" class="search-title">Search by Zip Code:</label>
+          <input id="user-input" type="text" name="search-input" class="form-control" placeholder="ex. 98133">
+          <br>
+          <input id="add-input" type="button" value="Submit" class="btn btn-info">
+        </form>
+        <br>
+        <div class="form-check" v-for="layer in layers" :key="layer.id">
+          <!-- label and input elements go here -->
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" v-model="layer.active" @change="layerChanged(layer.id, layer.active)" />
+            {{ layer.name }}
+          </label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <p class="text-muted credit" style="color:white !important;">Project by <a href="" target='_blank'>Lacey Gibbons</a>, <a href="" target='_blank'>Shannon Line</a>, and <a href="https://dericson87.github.io/Portfolio/" target='_blank'>Derek Ericson</a>.</p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js"></script>
+  <script src="assets/javascript/leaflet/leaflet.js"></script>
+  <script src="assets/javascript/zip-codes.geojson.js"></script>
+  <script src="assets/javascript/neighborhoods.js"></script>
+  <script src="assets/javascript/main.js"></script>
+  </div>
+</body>
+</html>
